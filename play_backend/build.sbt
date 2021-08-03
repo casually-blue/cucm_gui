@@ -5,6 +5,7 @@ organization := "org.coramdeoacademy"
 
 libraryDependencies += guice
 libraryDependencies += "javax.xml.ws" % "jaxws-api" % "2.3.1"
+libraryDependencies += "org.realityforge.org.jetbrains.annotations" % "org.jetbrains.annotations" % "1.7.0"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
