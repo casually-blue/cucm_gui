@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions
-	xmlns="http://schemas.xmlsoap.org/wsdl/"
-	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
-	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
-	xmlns:s="http://www.w3.org/2001/XMLSchema"
-	xmlns:s0="http://www.cisco.com/AXLAPIService/"
-	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
-	xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
-	xmlns:xsd1="http://www.cisco.com/AXL/API/11.5"
-	targetNamespace="http://www.cisco.com/AXLAPIService/">
+		xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+		xmlns:s0="http://www.cisco.com/AXLAPIService/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd1="http://www.cisco.com/AXL/API/11.5"
+		targetNamespace="http://www.cisco.com/AXLAPIService/"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<import location="AXLSoap.xsd" namespace="http://www.cisco.com/AXL/API/11.5"/>
 
@@ -23625,7 +23622,7 @@
 
 	<service name="AXLAPIService">
 		<port binding="s0:AXLAPIBinding" name="AXLPort">
-			<soap:address location="https://10.10.150.21:8443/axl/"/>
+			<soap:address location="https://CDACUCMPUB.coramdeo.local:8443/axl/"/>
 		</port>
 	</service>
 </definitions>

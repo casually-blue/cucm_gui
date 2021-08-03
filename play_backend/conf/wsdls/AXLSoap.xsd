@@ -20,7 +20,7 @@ Copyright (c) 2006, 2013 Cisco Systems, Inc.
     </xsd:complexType>
     <xsd:complexType name="XSipProfile">
         <xsd:sequence minOccurs="0">
-            <xsd:element maxOccurs="1" minOccurs="1" name="name" nillable="false" type="axlapi:String50"/>
+            <xsd:element name="name" nillable="false" type="axlapi:String50"/>
             <xsd:element maxOccurs="1" minOccurs="0" name="description" nillable="true" type="axlapi:String100"/>
             <xsd:element default="101" maxOccurs="1" minOccurs="0" name="defaultTelephonyEventPayloadType" nillable="false" type="axlapi:XInteger"/>
             <xsd:element default="false" maxOccurs="1" minOccurs="0" name="redirectByApplication" nillable="false" type="axlapi:boolean"/>

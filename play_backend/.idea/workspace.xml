@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fc84d27-7158-4e26-a652-364e81b21ba5" name="Default Changelist" comment="" />
+    <list default="true" id="6fc84d27-7158-4e26-a652-364e81b21ba5" name="Default Changelist" comment="Working File">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/CUCMListPhonesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/exception.scala.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certificate/cacerts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/certificate/cucm.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/AuthHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/index.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/wsdls/AXLAPI.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/conf/wsdls/AXLAPI.wsdl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/wsdls/AXLSoap.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/conf/wsdls/AXLSoap.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,8 +59,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="Play2ProjectSettings">
     <option name="LANGUAGE_IMPORTS">
@@ -67,11 +99,13 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1w5kLAeTVOpmyFZHQKROlUA6Vpf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -79,10 +113,10 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/app" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.sbt" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
@@ -136,6 +170,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6fc84d27-7158-4e26-a652-364e81b21ba5" name="Default Changelist" comment="" />
+      <changelist id="" name="New changelist" comment="" />
       <created>1627755782211</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -153,10 +188,58 @@
       <workItem from="1627850724396" duration="756000" />
       <workItem from="1627851538105" duration="5172000" />
       <workItem from="1627867297489" duration="1985000" />
+      <workItem from="1627934416513" duration="2033000" />
+      <workItem from="1627936491186" duration="5793000" />
+      <workItem from="1627947623667" duration="5000" />
+      <workItem from="1627958682208" duration="14911000" />
+      <workItem from="1628019974311" duration="484000" />
     </task>
+    <task id="LOCAL-00001" summary="Update gitignore">
+      <created>1628020292853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020292854</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update gitignore">
+      <created>1628020344355</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1628020344355</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update with working rest json" />
+    <MESSAGE value="Update gitignore" />
+    <MESSAGE value="Working File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working File" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
