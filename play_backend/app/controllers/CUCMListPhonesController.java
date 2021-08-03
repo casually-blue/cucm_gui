@@ -1,14 +1,16 @@
 package controllers;
 
-import play.libs.Json;
 import play.mvc.*;
-import org.coramdeoacademy.cucm.*;
+import play.libs.Json;
 
-import javax.inject.Inject;
-import javax.xml.ws.BindingProvider;
-import java.util.List;
-import java.util.concurrent.CompletionStage;
-import java.util.concurrent.ExecutionException;
+import org.jetbrains.annotations.*;
+
+import javax.inject.*;
+import javax.xml.ws.*;
+
+import java.util.concurrent.*;
+
+import org.coramdeoacademy.cucm.*;
 
 /**
  * This Controller handles JSON Creation from the CUCM API
@@ -17,7 +19,7 @@ public class CUCMListPhonesController extends Controller {
     private final AXLPort axlClient;
 
     @Inject
-    public CUCMListPhonesController(AXLAPIService apiService){
+    public CUCMListPhonesController(@NotNull AXLAPIService apiService){
         this.axlClient = apiService.aXLPort();
 
         putContextProperty(BindingProvider.USERNAME_PROPERTY, "cdaadmin");
@@ -29,22 +31,25 @@ public class CUCMListPhonesController extends Controller {
     }
 
     public Result getPhones() {
+        try {
+            return jsonResponse("phones", getResponse(axlClient.listPhone(getListPhoneReq())).getReturn().getPhone());
+        } catch (Exception e) {
+            return ok(views.html.exception.render(e));
+        }
+    }
+
+    private @NotNull
+    ListPhoneReq getListPhoneReq() {
         ListPhoneReq req = new ListPhoneReq();
         ListPhoneReq.SearchCriteria criteria = new ListPhoneReq.SearchCriteria();
         {
             criteria.setName("%");
         }
         req.setSearchCriteria(criteria);
-
-        try {
-            List<LPhone> phones = getResponse(axlClient.listPhone(req)).getReturn().getPhone();
-            return jsonResponse("phones", phones);
-        } catch (Exception ex){
-            return ok(views.html.exception.render(ex));
-        }
+        return req;
     }
 
-    public <Response> Response getResponse(CompletionStage<Response> res) throws ExecutionException, InterruptedException {
+    public <R> R getResponse(@NotNull CompletionStage<R> res) throws ExecutionException, InterruptedException {
         return res.toCompletableFuture().get();
     }
 
