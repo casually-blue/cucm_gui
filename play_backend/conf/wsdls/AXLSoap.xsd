@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axlapi="http://www.cisco.com/AXL/API/11.5" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.cisco.com/AXL/API/11.5" version="11.5">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:axlapi="http://www.cisco.com/AXL/API/11.5"
+            targetNamespace="http://www.cisco.com/AXL/API/11.5" version="11.5">
     <xsd:annotation>
         <xsd:documentation><![CDATA[
 

@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fc84d27-7158-4e26-a652-364e81b21ba5" name="Default Changelist" comment="Working File">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/CUCMListPhonesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/exception.scala.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/certificate/cacerts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/certificate/cucm.pem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/AuthHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.scala.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main.scala.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/wsdls/AXLAPI.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/conf/wsdls/AXLAPI.wsdl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/wsdls/AXLSoap.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/conf/wsdls/AXLSoap.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$27c8fab796ccf492a0a6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +100,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="proofread" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
@@ -192,7 +176,7 @@
       <workItem from="1627936491186" duration="5793000" />
       <workItem from="1627947623667" duration="5000" />
       <workItem from="1627958682208" duration="14911000" />
-      <workItem from="1628019974311" duration="484000" />
+      <workItem from="1628019974311" duration="701000" />
     </task>
     <task id="LOCAL-00001" summary="Update gitignore">
       <created>1628020292853</created>
