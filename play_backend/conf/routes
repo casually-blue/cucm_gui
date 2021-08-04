@@ -1,10 +1,6 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
-# ~~~~
-# Map static resources from the /public folder to the /assets URL path
 GET     /kotlin        controllers.KotlinController.index
 GET     /phones        controllers.KotlinController.getPhones
 GET     /              controllers.Default.redirect(to = "/index.html")
-GET     /*file         controllers.Assets.versioned(path="/public", file: Asset)
+GET     /*file         controllers.KAssets.at(path="public", file)
 
 
