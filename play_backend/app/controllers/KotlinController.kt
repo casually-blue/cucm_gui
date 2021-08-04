@@ -17,19 +17,19 @@ class KotlinController @Inject constructor(service: AXLAPIService): Controller()
         }
     }
 
-    fun index(): Result? {
-        return ok("Hello From Kotlin")
+    fun index(): Result? = ok("Hello from kotlin")
+
+    fun getPhones(): Result? = ListPhoneReq().let { req ->
+        ListPhoneReq.SearchCriteria().let { sc ->
+            sc.name = "%"
+            sc
+        }.also { req.searchCriteria = it }
+        client.listPhone(req)
+            .`return`
+            .phone
+            .let {
+                ok(Json.newObject().putPOJO("phones", Json.toJson(it)))
+            }
     }
 
-    fun getPhones(): Result? {
-        ListPhoneReq().let { req ->
-            req.searchCriteria = ListPhoneReq.SearchCriteria().let { sc ->
-                sc.name = "%"
-                sc
-            }
-            client.listPhone(req).`return`.phone.let {
-                return ok(Json.newObject().putPOJO("phones", Json.toJson(it)))
-            }
-        }
-    }
 }
