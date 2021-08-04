@@ -8,7 +8,7 @@ plugins {
 
 dependencies {
     implementation("commons-lang:commons-lang:2.6")
-    implementation("com.typesafe.play:play-guice_2.12:2.6.15")
+    implementation("com.typesafe.play:play-guice_2.12:2.8.8")
 }
 
 repositories {
@@ -30,7 +30,7 @@ repositories {
 
 play {
     platform{
-        playVersion.set("2.6.15")
+        playVersion.set("2.8.8")
         scalaVersion.set("2.12")
         javaVersion.set(JavaVersion.VERSION_1_8)
     }
