@@ -9,6 +9,9 @@ plugins {
 dependencies {
     implementation("commons-lang:commons-lang:2.6")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-html:0.7.2")
 }
 
 repositories {
@@ -25,6 +28,10 @@ repositories {
     maven {
         name = "gradle-js"
         url = uri("https://repo.gradle.org/gradle/javascript-public")
+    }
+
+    maven {
+        url = uri("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven")
     }
 }
 
