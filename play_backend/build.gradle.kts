@@ -34,17 +34,27 @@ play {
         scalaVersion.set("2.12")
         javaVersion.set(JavaVersion.VERSION_1_8)
     }
+
+
     injectedRoutesGenerator.set(true)
 }
 
 sourceSets {
     named("main") {
         scala.srcDir("app")
-        kotlin.sourceSets.named("main").get().kotlin.srcDir("app")
     }
 }
 
+kotlin {
+  sourceSets {
+      named("main"){
+          kotlin.srcDir("app")
+      }
+  }
+}
+
 tasks.compileScala {
-    dependsOn.add(tasks.compileKotlin.get())
-    classpath += files(tasks.compileKotlin.get().destinationDirectory)
+    val compileKotlin = tasks.compileKotlin.get()
+    dependsOn.add(compileKotlin)
+    classpath += files(compileKotlin.destinationDirectory)
 }

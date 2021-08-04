@@ -1,5 +1,4 @@
-GET     /kotlin        controllers.KotlinController.index
-GET     /phones        controllers.KotlinController.getPhones
+GET     /phones        controllers.CUCMRestController.getPhones
 GET     /              controllers.Default.redirect(to = "/index.html")
 GET     /*file         controllers.KAssets.at(path="public", file)
 
