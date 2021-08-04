@@ -1,18 +1,20 @@
 package controllers
 
-import org.coramdeoacademy.cucm.*
 import play.libs.Json
-import play.mvc.Controller
-import play.mvc.Result
+import play.mvc.*
 import javax.inject.Inject
 import javax.xml.ws.BindingProvider
+
+import org.coramdeoacademy.cucm.*
 
 class KotlinController @Inject constructor(service: AXLAPIService): Controller() {
     val client: AXLPort = service.axlPort
 
     init {
-        (client as BindingProvider).requestContext[BindingProvider.USERNAME_PROPERTY] = "cdaadmin"
-        (client as BindingProvider).requestContext[BindingProvider.PASSWORD_PROPERTY] = "cdaadmpw"
+        (client as BindingProvider).requestContext.let {
+            it[BindingProvider.USERNAME_PROPERTY] = "cdaadmin"
+            it[BindingProvider.PASSWORD_PROPERTY] = "cdaadmpw"
+        }
     }
 
     fun index(): Result? {
