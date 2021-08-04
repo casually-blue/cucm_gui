@@ -3,12 +3,8 @@ package controllers;
 import play.mvc.*;
 import play.libs.Json;
 
-import org.jetbrains.annotations.*;
-
 import javax.inject.*;
 import javax.xml.ws.*;
-
-import java.util.concurrent.*;
 
 import org.coramdeoacademy.cucm.*;
 
@@ -19,8 +15,8 @@ public class CUCMListPhonesController extends Controller {
     private final AXLPort axlClient;
 
     @Inject
-    public CUCMListPhonesController(@NotNull AXLAPIService apiService){
-        this.axlClient = apiService.aXLPort();
+    public CUCMListPhonesController(AXLAPIService apiService){
+        this.axlClient = apiService.getAXLPort();
 
         putContextProperty(BindingProvider.USERNAME_PROPERTY, "cdaadmin");
         putContextProperty(BindingProvider.PASSWORD_PROPERTY, "cdaadmpw");
@@ -32,13 +28,12 @@ public class CUCMListPhonesController extends Controller {
 
     public Result getPhones() {
         try {
-            return jsonResponse("phones", getResponse(axlClient.listPhone(getListPhoneReq())).getReturn().getPhone());
+            return jsonResponse("phones", axlClient.listPhone(getListPhoneReq()).getReturn().getPhone());
         } catch (Exception e) {
             return ok(views.html.exception.render(e));
         }
     }
 
-    private @NotNull
     ListPhoneReq getListPhoneReq() {
         ListPhoneReq req = new ListPhoneReq();
         ListPhoneReq.SearchCriteria criteria = new ListPhoneReq.SearchCriteria();
@@ -47,10 +42,6 @@ public class CUCMListPhonesController extends Controller {
         }
         req.setSearchCriteria(criteria);
         return req;
-    }
-
-    public <R> R getResponse(@NotNull CompletionStage<R> res) throws ExecutionException, InterruptedException {
-        return res.toCompletableFuture().get();
     }
 
     public Result jsonResponse(String name, Object o){
