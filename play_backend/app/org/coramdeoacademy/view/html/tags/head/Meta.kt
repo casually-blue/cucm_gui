@@ -1,19 +1,14 @@
 package org.coramdeoacademy.view.html.tags.head
 
-fun HeadTag.meta(content: String, httpEquiv: String){
-    val a = initTag(Meta()) {}
-    a.content = content
-    a.httpEquiv = httpEquiv
+import org.coramdeoacademy.view.html.attributes.Attribute
+
+fun HeadTag.meta(content: Content, httpEquiv: HttpEquiv, vararg attributes: Attribute){
+    initTag(Meta(content, httpEquiv, *attributes)) {}
 }
-class Meta : HeadTag("meta"){
-    var content: String
-        get() = attributes["content"]!!
-        set(value) {
-            attributes["content"] = value
-        }
-    var httpEquiv: String
-        get() = attributes["http-equiv"]!!
-        set(value) {
-            attributes["http-equiv"] = value
-        }
+class Meta(content: Content, httpEquiv: HttpEquiv, vararg attributes: Attribute) : HeadTag("meta", content, httpEquiv, *attributes){
 }
+
+class Content(value: String): Attribute("content", value)
+fun content(value: String): Content = Content(value)
+class HttpEquiv(value: String): Attribute("http-equiv", value)
+fun httpEquiv(value: String): HttpEquiv = HttpEquiv(value)

@@ -2,11 +2,11 @@ package org.coramdeoacademy.view.html.tags
 
 import org.coramdeoacademy.view.html.element.Element
 import org.coramdeoacademy.view.html.HtmlTagMarker
+import org.coramdeoacademy.view.html.attributes.Attribute
 
 @HtmlTagMarker
-abstract class Tag(val name: String) : Element {
+abstract class Tag(val name: String, vararg var attributes: Attribute) : Element {
     val children = arrayListOf<Element>()
-    val attributes = hashMapOf<String, String>()
 
     fun <T : Element> initTag(tag: T, init: T.() -> Unit): T {
         tag.init()
@@ -28,8 +28,8 @@ abstract class Tag(val name: String) : Element {
 
     private fun renderAttributes(): String {
         val builder = StringBuilder()
-        for ((attr, value) in attributes) {
-            builder.append(" $attr=\"$value\"")
+        for (attr in attributes) {
+            builder.append(" ${attr.name}=\"${attr.value}\"")
         }
         return builder.toString()
     }

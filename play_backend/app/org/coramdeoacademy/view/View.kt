@@ -1,10 +1,11 @@
 package org.coramdeoacademy.view
 
 import org.coramdeoacademy.view.html.HTML
+import org.coramdeoacademy.view.html.attributes.Attribute
 import play.mvc.Result
 
-fun html(init: HTML.() -> Unit): HTML {
-    val html = HTML()
+fun html(vararg attributes: Attribute, init: HTML.() -> Unit): HTML {
+    val html = HTML(*attributes)
     html.init()
     return html
 }
