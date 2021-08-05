@@ -1,4 +1,6 @@
 package org.coramdeoacademy.view.html.tags.body
 
-fun BodyTag.h1(init: H1.() -> Unit) = initTag(H1(), init)
-class H1 : BodyTag("h1")
+import org.coramdeoacademy.view.html.attributes.Attribute
+
+fun BodyTag.h1(vararg attributes: Attribute, init: H1.() -> Unit) = initTag(H1(*attributes), init)
+class H1(vararg attributes: Attribute) : BodyTag("h1", *attributes)
