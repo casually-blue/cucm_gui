@@ -1,9 +1,9 @@
 package views
 
-import com.github.casuallyblue.view.*
-import com.github.casuallyblue.view.html.attributes.*
-import com.github.casuallyblue.view.html.tags.body.*
-import com.github.casuallyblue.view.html.tags.head.*
+import io.github.casuallyblue.web.*
+import io.github.casuallyblue.web.html.attributes.*
+import io.github.casuallyblue.web.html.tags.body.*
+import io.github.casuallyblue.web.html.tags.head.*
 
 class TestView: View(
     html(lang("en")) {

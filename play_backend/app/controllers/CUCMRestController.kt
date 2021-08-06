@@ -1,6 +1,6 @@
 package controllers
 
-import com.github.casuallyblue.cucm.*
+import io.github.casuallyblue.cucm.*
 import play.libs.Json
 import play.mvc.*
 import javax.xml.ws.BindingProvider

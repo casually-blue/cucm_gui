@@ -9,8 +9,8 @@ plugins {
 dependencies {
     implementation("commons-lang:commons-lang:20030203.000129")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
-    implementation("io.github.casually-blue:cucm:1.5")
-    implementation("io.github.casually-blue:web:1.0")
+    implementation("io.github.casually-blue:cucm:1.6")
+    implementation("io.github.casually-blue:web:1.7")
 }
 
 repositories {
