@@ -20,9 +20,11 @@ class CUCMRestController @Inject constructor(service: AXLAPIService): Controller
      */
     init {
         (client as BindingProvider).requestContext.let {
+            it[BindingProvider.ENDPOINT_ADDRESS_PROPERTY] = "https://cdacucmpub.coramdeo.local:8443/axl/"
             it[BindingProvider.USERNAME_PROPERTY] = "cdaadmin"
             it[BindingProvider.PASSWORD_PROPERTY] = "cdaadmpw"
         }
+
     }
 
     /**
@@ -47,6 +49,6 @@ class CUCMRestController @Inject constructor(service: AXLAPIService): Controller
      * Test of kotlin view template
      */
     fun testView(): Result {
-        return views.TestView().render()
+        return views.TestView.render()
     }
 }
