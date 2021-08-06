@@ -49,6 +49,6 @@ class CUCMRestController @Inject constructor(service: AXLAPIService): Controller
      * Test of kotlin view template
      */
     fun testView(): Result {
-        return views.TestView.render()
+        return views.TestView().render()
     }
 }

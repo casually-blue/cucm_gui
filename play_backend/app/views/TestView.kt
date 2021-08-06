@@ -5,7 +5,7 @@ import com.github.casuallyblue.view.html.attributes.*
 import com.github.casuallyblue.view.html.tags.body.*
 import com.github.casuallyblue.view.html.tags.head.*
 
-val TestView = View(
+class TestView: View(
     html(lang("en")) {
         head {
             title { +"Test Page View" }
