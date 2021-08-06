@@ -1,9 +1,10 @@
 package views
 
-import org.coramdeoacademy.view.*
-import org.coramdeoacademy.view.html.attributes.*
-import org.coramdeoacademy.view.html.tags.body.*
-import org.coramdeoacademy.view.html.tags.head.*
+import com.github.casuallyblue.view.*
+import com.github.casuallyblue.view.html.attributes.*
+import com.github.casuallyblue.view.html.tags.body.*
+import com.github.casuallyblue.view.html.tags.head.*
+
 
 class TestView: View(
     html(lang("en")) {

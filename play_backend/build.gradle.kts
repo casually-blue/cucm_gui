@@ -9,6 +9,8 @@ plugins {
 dependencies {
     implementation("commons-lang:commons-lang:20030203.000129")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
+    implementation("com.github.casually-blue:cucm:1.3")
+    implementation("com.github.casually-blue:web:1.0")
 }
 
 repositories {
@@ -29,6 +31,15 @@ repositories {
 
     maven {
         url = uri("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven")
+    }
+
+    maven {
+        name = "Github Packages"
+        url = uri("https://maven.pkg.github.com/casually-blue/com.cisco.cucm/")
+        credentials {
+            username = project.findProperty("gpr.user") as String?
+            password = project.findProperty("gpr.key") as String?
+        }
     }
 }
 
@@ -51,7 +62,7 @@ sourceSets {
 kotlin {
     sourceSets {
         named("main") {
-            kotlin.srcDir("app")
+            kotlin.setSrcDirs(files("$projectDir/app"))
         }
     }
 }
