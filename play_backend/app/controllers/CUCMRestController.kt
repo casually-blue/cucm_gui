@@ -1,8 +1,6 @@
 package controllers
 
-import com.cisco.axlapiservice.*
-import com.cisco.axl.api._11.*
-
+import com.github.casuallyblue.cucm.*
 import play.libs.Json
 import play.mvc.*
 import javax.inject.Inject
