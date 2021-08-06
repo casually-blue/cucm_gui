@@ -10,20 +10,11 @@ dependencies {
     implementation("commons-lang:commons-lang:20030203.000129")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
     implementation("io.github.casually-blue:cucm:1.5")
-    implementation("com.github.casually-blue:web:1.1")
+    implementation("io.github.casually-blue:web:1.0")
 }
 
 repositories {
     mavenCentral()
-
-    maven {
-        name = "Github Packages"
-        url = uri("https://maven.pkg.github.com/casually-blue/repos/")
-        credentials {
-            username = project.findProperty("gpr.user") as String?
-            password = project.findProperty("gpr.key") as String?
-        }
-    }
 }
 
 play {
