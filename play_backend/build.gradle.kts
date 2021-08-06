@@ -8,7 +8,6 @@ plugins {
 
 dependencies {
     implementation("commons-lang:commons-lang:20030203.000129")
-    implementation("org.scala-lang:scala-library:2.12.0")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
     implementation("com.github.casually-blue:cucm:1.4")
     implementation("com.github.casually-blue:web:1.1")
@@ -36,7 +35,7 @@ repositories {
 
     maven {
         name = "Github Packages"
-        url = uri("https://maven.pkg.github.com/casually-blue/com.cisco.cucm/")
+        url = uri("https://maven.pkg.github.com/casually-blue/repos/")
         credentials {
             username = project.findProperty("gpr.user") as String?
             password = project.findProperty("gpr.key") as String?

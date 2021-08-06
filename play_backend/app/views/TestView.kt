@@ -5,7 +5,6 @@ import com.github.casuallyblue.view.html.attributes.*
 import com.github.casuallyblue.view.html.tags.body.*
 import com.github.casuallyblue.view.html.tags.head.*
 
-
 val TestView = View(
     html(lang("en")) {
         head {
