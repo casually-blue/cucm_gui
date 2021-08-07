@@ -9,8 +9,9 @@ plugins {
 dependencies {
     implementation("commons-lang:commons-lang:20030203.000129")
     implementation("com.typesafe.play:play-guice_2.12:2.8.8")
-    implementation("io.github.casually-blue:cucm:1.6")
-    implementation("io.github.casually-blue:web:1.7")
+    implementation("io.github.casually-blue:cucm-11:1.6")
+    implementation("io.github.casually-blue:web-11:1.7")
+    implementation("com.sun.xml.ws:jaxws-rt:2.3.3")
 }
 
 repositories {
@@ -21,7 +22,7 @@ play {
     platform{
         playVersion.set("2.8.8")
         scalaVersion.set("2.12")
-        javaVersion.set(JavaVersion.VERSION_1_8)
+        javaVersion.set(JavaVersion.VERSION_11)
     }
 
     injectedRoutesGenerator.set(true)
