@@ -1,6 +1,8 @@
-GET     /phones        controllers.CUCMRestController.getPhones
-GET     /              controllers.Default.redirect(to = "/index.html")
-GET     /test          controllers.CUCMRestController.testView
-GET     /*file        controllers.KAssets.at(path= "public", file)
+# Type  URL         Controller
+###################################################################
+GET     /phones     controllers.CUCMRestController.getPhones
+GET     /           controllers.Default.redirect(to = "/index.html")
+GET     /test       controllers.CUCMRestController.testView
+GET     /*file      controllers.KAssets.at(path= "public", file)
 
 
