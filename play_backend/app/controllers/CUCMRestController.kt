@@ -22,6 +22,9 @@ class CUCMRestController: Controller() {
      */
     private val client: AXLPort = getClient()
 
+    /**
+     * Get and configure a client for the jaxws service
+     */
     private fun getClient(): AXLPort {
         val client = service.axlPort
         (client as BindingProvider).requestContext.let {
@@ -40,6 +43,10 @@ class CUCMRestController: Controller() {
         return ok(Json.toJson(getPhoneList()))
     }
 
+    /**
+     * Read a list of all the named phones from the CUCM server
+     *
+     */
     private fun getPhoneList(): List<LPhone> {
         val nameFilter = "%"
         getRequestFromJson<ListPhoneReq>("""{"searchCriteria":{"name":"$nameFilter"}}""") .let {
@@ -47,6 +54,9 @@ class CUCMRestController: Controller() {
         }
     }
 
+    /**
+     * Generate an object from a json string
+     */
     private inline fun <reified T> getRequestFromJson(json: String): T {
         return ObjectMapper().readValue(json, SimpleType.constructUnsafe(T::class.java))
     }
