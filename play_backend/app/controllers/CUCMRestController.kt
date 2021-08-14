@@ -47,7 +47,7 @@ class CUCMRestController: Controller() {
         }
     }
 
-    private inline fun <reified T : Any> getRequestFromJson(json: String): T {
+    private inline fun <reified T> getRequestFromJson(json: String): T {
         return ObjectMapper().readValue(json, SimpleType.constructUnsafe(T::class.java))
     }
 
