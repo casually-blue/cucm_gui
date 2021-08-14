@@ -1,5 +1,8 @@
 package controllers
 
+import com.fasterxml.jackson.databind.JavaType
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.databind.type.SimpleType
 import io.github.casuallyblue.cucm.*
 import play.libs.Json
 import play.mvc.*
@@ -35,18 +38,17 @@ class CUCMRestController: Controller() {
      * Get Json of all phones configured on the CUCM system
      */
     fun getPhones(): Result? {
-        return ok(Json.newObject().putPOJO("phones", Json.toJson(getPhoneList())))
+        return ok(Json.toJson(getPhoneList("%")))
     }
 
-    private fun getPhoneList(): List<LPhone> {
-        val request = ListPhoneReq().let { req ->
-            req.searchCriteria = ListPhoneReq.SearchCriteria().let { sc ->
-                sc.name = "%"
-                sc
-            }
-            req
+    private fun getPhoneList(nameFilter: String): List<LPhone> {
+        getRequestFromJson<ListPhoneReq>("{\"searchCriteria\":{\"$nameFilter\":\"%\"}}") .let {
+            return client.listPhone(it).`return`.phone
         }
-        return client.listPhone(request).`return`.phone
+    }
+
+    private inline fun <reified T : Any> getRequestFromJson(json: String): T {
+        return ObjectMapper().readValue(json, SimpleType.constructUnsafe(T::class.java))
     }
 
     /**

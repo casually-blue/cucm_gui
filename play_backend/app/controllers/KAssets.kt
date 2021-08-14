@@ -6,7 +6,9 @@ import java.io.File
 
 class KAssets: Controller() {
     fun at(path: String, file: String): Result?{
-        val f = File("$path/$file")
+        var loc = "$path/$file"
+        loc = loc.replace("..", "")
+        val f = File(loc)
         return ok(f, true)
     }
 }

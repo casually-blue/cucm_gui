@@ -12,6 +12,7 @@ dependencies {
     implementation("io.github.casually-blue:cucm-11:1.6")
     implementation("io.github.casually-blue:web-11:1.7")
     implementation("com.sun.xml.ws:jaxws-rt:2.3.3")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.21")
 }
 
 repositories {
