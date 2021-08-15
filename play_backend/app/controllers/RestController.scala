@@ -1,4 +1,5 @@
 package controllers {
+  import com.google.inject.Inject
   import play.mvc._
   import io.github.casuallyblue.cucm._
   import play.mvc.Results.ok
@@ -6,16 +7,16 @@ package controllers {
 
   import java.util
   import javax.xml.ws.BindingProvider
+  import scala.collection.JavaConverters.mapAsScalaMapConverter
 
-  class RestController extends Controller {
-    def service = new AXLAPIService
-    def client: AXLPort = {
-      def self = service.getAXLPort()
-      def ctx = self.asInstanceOf[BindingProvider].getRequestContext
+  class RestController @Inject()(service: AXLAPIService) extends Controller {
+    private def client: AXLPort = {
+      val self = service.getAXLPort()
 
-      ctx.put(BindingProvider.USERNAME_PROPERTY, "cdaadmin")
-      ctx.put(BindingProvider.PASSWORD_PROPERTY, "cdaadmpw")
-      ctx.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, "https://cdacucmpub.coramdeo.local:8443/axl/")
+      val ctx = self.asInstanceOf[BindingProvider].getRequestContext.asScala
+      ctx(BindingProvider.USERNAME_PROPERTY) = "cdaadmin"
+      ctx(BindingProvider.PASSWORD_PROPERTY) = "cdaadmpw"
+      ctx(BindingProvider.ENDPOINT_ADDRESS_PROPERTY) = "https://cdacucmpub.coramdeo.local:8443/axl/"
 
       self
     }
