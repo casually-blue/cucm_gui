@@ -1,0 +1,6 @@
+[submodule "cucm_frontend"]
+	path = cucm_frontend
+	url = git@github.com:casually-blue/cucm_frontend
+[submodule "cucm_backend"]
+	path = cucm_backend
+	url = git@github.com:casually-blue/cucm_backend

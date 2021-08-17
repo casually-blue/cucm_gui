@@ -5,10 +5,10 @@ user interface and rest api to the Cisco Unified Communications Manager.
 It requires `npm` and JDK 11 to run. To execute it follow these commands.
 
 ```bash
-$ cd frontend
+$ cd cucm_frontend
 $ npm install
 $ npm run start
 # In a seperate Terminal run:
-$ cd play_backend
+$ cd cucm_backend
 $ ./gradlew runPlay
 ```
